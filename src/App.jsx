@@ -6,11 +6,10 @@ import './App.css';
 
 function App() {
 
-  const [listTransactions, setListTransactions] = useState([])
+  const [listTransactions,setListTransactions] = useState([])
 
   const addList = (newItemList) => {
-    setListTransactions(newItemList)
-    console.log(newItemList)
+    setListTransactions([...listTransactions, newItemList])
   }
 
   return (

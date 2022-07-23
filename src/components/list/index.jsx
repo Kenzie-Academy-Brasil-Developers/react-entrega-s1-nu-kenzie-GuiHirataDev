@@ -1,9 +1,13 @@
 import Card from "../card/card"
 
-const List = (listTransactions) => {
+const List = ({listTransactions}) => {
 
     return (
-            <Card elem={listTransactions}/>
+            <>
+                {listTransactions.map((elem,index) => {
+                    return <Card elem={elem} key={index} />
+                })}
+            </>
     )
 }
 
