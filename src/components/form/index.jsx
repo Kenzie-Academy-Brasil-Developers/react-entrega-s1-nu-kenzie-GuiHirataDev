@@ -18,10 +18,10 @@ const Form = ({addList}) => {
             />
             <p>Ex: Compra de roupas</p>
             <br/>
-            <label htmlFor="user">Valor</label>
+            <label htmlFor="value">Valor</label>
             <br/>
             <input
-            id="user" 
+            id="value" 
             type="number"
             placeholder="Insira um valor" 
             onChange={(event) => setInputValue(event.target.value)}

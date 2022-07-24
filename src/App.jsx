@@ -12,6 +12,15 @@ function App() {
     setListTransactions([...listTransactions, newItemList])
   }
 
+  const totalValue = listTransactions.reduce((accumulator, actualValue) => {
+    return parseInt(actualValue.value) + accumulator
+  }, 0)
+
+  const handleList = (item) => {
+    const listFiltered = listTransactions.filter((elem) => (elem !== item))
+    setListTransactions(listFiltered)
+  }
+
   return (
     <div className='divPrincipal'>
       <header>
@@ -21,8 +30,8 @@ function App() {
       <main className='container'>
         <section className='form'>
           <Form addList={addList}/>
-          <div className='totalValue'>
-            <h3>Valor total:</h3>
+          <div className='divTotalValue'>
+            <h3>Valor total: <span className='totalValue'>$ {totalValue}</span></h3>
             <p>O valor se refere ao saldo</p>
           </div>
         </section>
@@ -35,7 +44,7 @@ function App() {
             <button>Despesas</button>
             </div>
           </div>
-          <List listTransactions= {listTransactions} />
+          <List listTransactions= {listTransactions} handleList={handleList}/>
         </section>
       </main>
     </div>

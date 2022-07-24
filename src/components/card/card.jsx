@@ -1,6 +1,6 @@
 import { FaTrash } from 'react-icons/fa'
 
-const Card = ({elem}) => {
+const Card = ({elem, handleList}) => {
     return (
         <div className="containerCards">
             <div>
@@ -9,7 +9,7 @@ const Card = ({elem}) => {
             </div>
             <div className='valueTrash'>
                 <span>R$ {elem.value},00</span>
-                <button><FaTrash/></button>
+                <button onClick={() => handleList(elem)}><FaTrash/></button>
             </div>
         </div>
     )

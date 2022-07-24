@@ -101,7 +101,7 @@ header button {
   cursor: pointer;
 }
 
-.totalValue {
+.divTotalValue {
   width: 363px;
   border: 1px solid var(--main-bg-light-gray);
   margin-top: 20px;
@@ -109,12 +109,17 @@ header button {
   flex-direction: column;
 }
 
-.totalValue h3 {
+.divTotalValue h3 {
   margin: 20px 0px 0px 20px;
 }
 
-.totalValue p {
+.divTotalValue p {
   margin-left: 20px;
+}
+
+.totalValue {
+  margin-left: 150px;
+  color: var(--main-bg-pink);
 }
 
 .divCards {
