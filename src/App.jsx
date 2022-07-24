@@ -13,30 +13,32 @@ function App() {
   }
 
   return (
-    <>
+    <div className='divPrincipal'>
       <header>
-          <h1>Nu Kenzie</h1>
+          <h1><span>Nu</span> Kenzie</h1>
           <button>Inicio</button>
       </header>
-      <main>
-        <section>
+      <main className='container'>
+        <section className='form'>
           <Form addList={addList}/>
-          <div>
+          <div className='totalValue'>
             <h3>Valor total:</h3>
             <p>O valor se refere ao saldo</p>
           </div>
         </section>
-        <section>
-          <div>
+        <section className='cards'>
+          <div className='divCards'>
             <h3>Resumo financeiro</h3>
+            <div className='divButtons'>
             <button>Todos</button>
             <button>Entradas</button>
             <button>Despesas</button>
+            </div>
           </div>
           <List listTransactions= {listTransactions} />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 

@@ -1,13 +1,15 @@
+import { FaTrash } from 'react-icons/fa'
+
 const Card = ({elem}) => {
     return (
-        <div>
+        <div className="containerCards">
             <div>
                 <h2>{elem.description}</h2>
                 <p>{elem.type}</p>
             </div>
-            <div>
+            <div className='valueTrash'>
                 <span>R$ {elem.value},00</span>
-                <button>X</button>
+                <button><FaTrash/></button>
             </div>
         </div>
     )
