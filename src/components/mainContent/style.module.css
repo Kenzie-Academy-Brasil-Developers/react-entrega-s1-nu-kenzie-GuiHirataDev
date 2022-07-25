@@ -6,13 +6,10 @@
   --main-bg-light-gray-2: #f3f4f5;
 }
 
-#root {
-  font-family: "Nunito";
-}
-
 .divPrincipal {
   width: 100vw;
   height: 100vh;
+  font-family: "Nunito";
 }
 
 header {
@@ -151,9 +148,32 @@ header button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: linear-gradient(to right, var(--main-bg-light-gray) 0%, var(--main-bg-light-gray) 1%, var(--main-bg-light-gray-2) 0%, var(--main-bg-light-gray-2) 0%);
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.containerCardsEntry {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: linear-gradient(to right, #03B898 0%, #03B898 1%, var(--main-bg-light-gray-2) 0%, var(--main-bg-light-gray-2) 0%);
   margin: 20px 0px;
   border-radius: 10px;
+}
+
+.containerCardsEntry h2 {
+    font-size: 18px;
+}
+
+.containerCardsEntry button {
+  background-color: #dcdedf;
+  margin-left: 40px;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .containerCards h2 {

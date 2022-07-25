@@ -1,7 +1,5 @@
 import MainContent from './components/mainContent';
 import { useState } from 'react';
-import './App.css';
-
 
 function App() {
 

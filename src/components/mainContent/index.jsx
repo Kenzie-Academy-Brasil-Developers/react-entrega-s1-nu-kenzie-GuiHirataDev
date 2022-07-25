@@ -2,6 +2,7 @@ import Form from '../form';
 import List from '../list';
 import { useState } from 'react';
 import Image from '../imgs/image.png'
+import style from './style.module.css'
 
 const MainContent = ({init, SetInit, SetInitFalse}) => {
 
@@ -39,23 +40,23 @@ const MainContent = ({init, SetInit, SetInitFalse}) => {
 
     return (
         init ? 
-        <div className='divPrincipal'>
+        <div className={style.divPrincipal}>
         <header>
             <h1><span>Nu</span> Kenzie</h1>
             <button onClick={() => SetInitFalse()}>Inicio</button>
         </header>
-        <main className='container'>
-        <section className='form'>
+        <main className={style.container}>
+        <section className={style.form}>
             <Form addList={addList}/>
-            <div className='divTotalValue'>
-                <h3>Valor total: <span className='totalValue'>$ {totalValue}</span></h3>
+            <div className={style.divTotalValue}>
+                <h3>Valor total: <span className={style.totalValue}>$ {totalValue}</span></h3>
                 <p>O valor se refere ao saldo</p>
             </div>
             </section>
-            <section className='cards'>
-            <div className='divCards'>
+            <section className={style.cards}>
+            <div className={style.divCards}>
                 <h3>Resumo financeiro</h3>
-                <div className='divButtons'>
+                <div className={style.divButtons}>
                 <button>Todos</button>
                 <button onClick={() => entryFilter()}>Entradas</button>
                 <button onClick={() => expensesFilter()}>Despesas</button>
@@ -66,14 +67,14 @@ const MainContent = ({init, SetInit, SetInitFalse}) => {
         </main>
         </div>
         :
-        <main className='mainInit'>
-            <div className='initContent'>
+        <main className={style.mainInit}>
+            <div className={style.initContent}>
                 <h2><span>Nu</span> Kenzie</h2>
-                <p className='pContent'>Centralize o controle das suas finanças</p>
-                <p className='pDescription'>de forma rápida e segura.</p>
+                <p className={style.pContent}>Centralize o controle das suas finanças</p>
+                <p className={style.pDescription}>de forma rápida e segura.</p>
                 <button onClick={() => SetInit()}>Iniciar</button>
             </div>
-            <div className='initImg'>
+            <div className={style.initImg}>
                 <img src={Image}/>
             </div>
         </main>
